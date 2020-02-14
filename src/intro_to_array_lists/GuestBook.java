@@ -21,8 +21,8 @@ public class GuestBook implements ActionListener {
 	// Guest #4: Donny Doners
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
-	JButton addButton = new JButton();
-	JButton viewButton = new JButton();
+	JButton addButton = new JButton("add");
+	JButton viewButton = new JButton("view");
 	JTextField textField = new JTextField();
 	ArrayList<String> names = new ArrayList<String>();
 	
@@ -47,7 +47,7 @@ public class GuestBook implements ActionListener {
 			names.add(JOptionPane.showInputDialog("Enter a name"));
 		}
 		if(viewButton == buttonPressed) {
-			JOptionPane.showMessageDialog(null, names);
+			JOptionPane.showMessageDialog(null, "Guest #1: " + names.get(0) + "\n" + "Guest #2: " + names.get(1) + "\n" + "Guest #3: " + names.get(2) + "\n" + "Guest #4: " + names.get(3));
 		}
 	}
 }
